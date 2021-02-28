@@ -15,7 +15,7 @@ function searchWeather() {
     "&appid=" +
     APPKEY +
     "&units=imperial";
-  alert(url);
+
   $.get({
     type: "GET",
     url: url,
@@ -27,8 +27,6 @@ function searchWeather() {
       $("#windSpeed").text(data.wind.speed);
 
       getForecast();
-      //  alert(data.main.humidity);
-      // create history link for this search
     },
   });
 }
@@ -46,7 +44,7 @@ function getForecast() {
     dataType: "json",
     success: function (data) {
       console.log(data);
-      // alert(data.list[0].dt_txt);
+
       for (var i = 0; i < 40; i += 8) {
         console.log(i);
         const dt = data.list[i].dt_txt;
