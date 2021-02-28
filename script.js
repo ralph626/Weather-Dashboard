@@ -10,7 +10,7 @@ function searchWeather() {
   HISTORY.push(searchValue);
   var GV_DATA = null;
   const url =
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    "//api.openweathermap.org/data/2.5/weather?q=" +
     searchValue +
     "&appid=" +
     APPKEY +
@@ -34,7 +34,7 @@ function searchWeather() {
 function getForecast() {
   const searchValue = $("#search-value").val();
   var url =
-    "http://api.openweathermap.org/data/2.5/forecast?q=" +
+    "//api.openweathermap.org/data/2.5/forecast?q=" +
     searchValue +
     "&appid=" +
     APPKEY +
