@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- this is the link for bootstrap -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <!-- this is the link for bootstrap/font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- this is the link for the CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>Weather Dashboard</title>
+  </head>
+
+  <body>
+    <!-- this is for the Weather Dashboard center title -->
+    <header class="container-fluid text-center text-white bg-dark p-2">
+      <h1>Weather Dashboard</h1>
+    </header>
+
+    <!-- this is the container for the search bar for the city input -->
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-lg-3 bg-light">
+          <h5 class="mt-1">Search for a City:</h5>
+          <div class="form-inline form-group">
+            <input class="form-control" type="text" id="search-value" />
+            <button class="btn btn-primary" id="search-button">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+
+          <!-- this is for the past searches -->
+          <ul class="list-group history"></ul>
+        </aside>
+        <div class="col-lg-9">
+          <div class="row mt-3">
+            Temperature: <span id="temperature"></span>
+          </div>
+          <div class="row mt-3">Humidity: <span id="humidity"></span></div>
+          <div class="row mt-3">Wind Speed: <span id="windSpeed"></span></div>
+          <div class="row mt-3">UV Index: <span id="uvIndex"></span></div>
+        </div>
+
+        <!-- this is for the current searches Weather forecast -->
+        <div class="col-lg-9">
+          <div id="today" class="mt-3"></div>
+          <div id="forecast" class="row mt-3"></div>
+        </div>
+      </div>
+    </div>
+    <!-- for each forecast -->
+    <div id="day1"></div>
+    <div id="day2"></div>
+    <div id="day3"></div>
+    <div id="day4"></div>
+    <div id="day5"></div>
+    <!-- this is the link for Javascript -->
+    <script src="script.js"></script>
+    <script>
+      $().ready();
+      {
+        $("#search-button").click(searchWeather);
+      }
+    </script>
+  </body>
+</html>
